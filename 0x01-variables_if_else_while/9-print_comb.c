@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-char c;
+int c;
 for (c = 38; c <= 47; c++)
 {
 putchar(c);
