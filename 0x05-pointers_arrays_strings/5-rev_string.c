@@ -1,20 +1,20 @@
-#include <stdio.h>
+#include "main.h"
+#include "2-strlen.c"
 
 /**
- * puts2 - prints every other character
- * @str: string
- * Return: nothing
+ * rev_string - reverse a string value
+ * @s: string to print
  */
 
-void puts2(char *str)
+void rev_string(char *s)
 {
-	int i = 0;
+	int i;
+	char t;
 
-	while (*(str + i) != '\0')
+	for (i = 0; i < _strlen(s) / 2; i++)
 	{
-		if (i % 2 == 0)
-			putchar(*(str + i));
-		i++;
+		t = s[i];
+		s[i] = s[_strlen(s) - i - 1];
+		s[_strlen(s) - i - 1] = t;
 	}
-	putchar(10);
 }
